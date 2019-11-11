@@ -8,11 +8,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 // ログイン画面
-var login = require('./routes/login'); // ←追加
+var login = require('./routes/login');
 // 新規登録画面
-// var register = require('./routes/register');
+var register = require('./routes/register');
 // 登録完了・ログイン後画面
-// var confirm = require('./routes/confirm');
+var confirm = require('./routes/confirm');
 
 var app = express();
 
@@ -28,13 +28,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
+app.post('/login', function (req, res, next) {
+  next('login')
+});
+
 app.use('/users', usersRouter);
 // ログイン画面
-app.use('/logins', login); // ←追加
+app.use('/login', login);
 // 新規登録画面
-// app.use('/register', register);
+app.use('/register', register);
 // 登録完了・ログイン後画面
-// app.use('/confirm', confirm);
+app.use('/confirm', confirm);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
