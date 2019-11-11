@@ -1,4 +1,4 @@
-### 画面繊維図
+### 画面遷移図
 <img width="682" alt="スクリーンショット 2019-11-11 14 33 03" src="https://user-images.githubusercontent.com/51279702/68563275-58cf3e00-0490-11ea-9d2a-9ae3507199ea.png">
 
 
