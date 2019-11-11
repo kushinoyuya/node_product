@@ -1,0 +1,17 @@
+extends layout
+div
+p ログインフォーム
+
+form(action="/register", method="post") ログイン
+    div
+        label(for="") メールアドレス
+        br
+        input(type="email", name="email")
+
+    div
+        label(for="") パスワード
+        br
+        input(type="password", name="password")
+
+    div
+        input(type="submit", value="ログイン")
